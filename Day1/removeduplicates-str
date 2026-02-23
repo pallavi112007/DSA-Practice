@@ -1,7 +1,7 @@
 import java.util.*;
 class Solution
 {
-  public static viod main(String[] args)
+  public static void main(String[] args)
   {
     Scanner sc=new Scanner(System.in);
     int T=sc.nextInt();
@@ -9,12 +9,12 @@ class Solution
     {
       int N=sc.nextInt();
       int[] arr=new int[N];
-      for(int i=0;i<N;i++)
+      for(int x=0;x<N;x++)
       {
-        arr[i]=sc.nextInt();
+        arr[x]=sc.nextInt();
       }
       int i=0;
-      for(int j=0;j<N;j++)
+      for(int j=1;j<N;j++)
       {
         if(arr[i]!=arr[j])
         i++;
