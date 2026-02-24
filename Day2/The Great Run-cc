@@ -1,0 +1,34 @@
+import java.util.*;
+class Solution
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    int T=sc.nextInt();
+    while(T-->0)
+    {
+      int sum=0,max=0;
+      int N=sc.nextInt();
+      int K=sc.nextInt();
+      int a1[]=new int[N];
+      for(int i=0;i<N;i++)
+      {
+        a1[i]=sc.nextInt();
+      }
+      for(int i=0;i<K;i++)
+      {
+        sum+=a1[i];
+      }
+      max=sum;
+      for(int i=K;i<N;i++)
+      {  
+        sum=sum+a1[i]-a1[i-K];
+        if(sum>max)
+        {
+          max=sum;
+        }
+      }
+    System.out.println(max);
+  }
+}
+}
