@@ -1,0 +1,45 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    Scanner sc=new Scanner(System.in);
+	    int row=sc.nextInt();
+	    int coloun=sc.nextInt();
+	    int[][] arr=new int[row][coloun];
+	    int[][] arr2=new int[row][coloun];
+	    int[][] arr3=new int[row][coloun];
+	    for(int i=0;i<row;i++)
+	    {
+	        for(int j=0;j<coloun;j++)
+	        {
+	            arr[i][j]=sc.nextInt();
+	        }
+	    }
+	    for(int i=0;i<row;i++)
+	    {
+	        for(int j=0;j<coloun;j++)
+	        {
+	            arr2[i][j]=sc.nextInt();
+	        }
+	    }
+	     for(int i=0;i<row;i++)
+	    {
+	        for(int j=0;j<coloun;j++)
+	        {
+	            arr3[i][j]=arr[i][j]-arr2[i][j];
+	        }
+	    }
+	    for(int i=0;i<row;i++)
+	    {
+	        for(int j=0;j<coloun;j++)
+	        {
+	            System.out.print(arr3[i][j]+" ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
