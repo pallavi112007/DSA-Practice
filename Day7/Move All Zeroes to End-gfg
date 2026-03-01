@@ -16,7 +16,7 @@ class Movezeros
                 index++;
             }
         }
-        if(index<n)
+        while(index<n)
         {
             arr[index]=0;
             index++;
