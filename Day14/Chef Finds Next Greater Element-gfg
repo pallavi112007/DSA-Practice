@@ -1,0 +1,23 @@
+public int[] findNextGreaterElement(int[] subsetNumbers, int[] fullNumbers) {
+    int n = subsetNumbers.length;
+    int n1 = fullNumbers.length;
+    int[] res = new int[n];
+    for (int i = 0; i < n; i++) {
+        res[i] = -1;
+    }
+    for (int i = 0; i < n; i++) {
+        for (int k = 0; k < n1; k++) {
+            if (subsetNumbers[i] == fullNumbers[k]) {
+                for (int j = k + 1; j < n1; j++) {
+                    if (fullNumbers[j] > subsetNumbers[i]) {
+                        res[i] = fullNumbers[j];
+                        break;
+                    }
+                }
+                break; 
+            }
+        }
+    }
+    return res;
+}
+    
