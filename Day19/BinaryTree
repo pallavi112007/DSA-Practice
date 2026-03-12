@@ -1,0 +1,65 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class BinaryTree
+{
+    static class node{
+        int data;
+        node left;
+        node right;
+        node(int data)
+        {
+            this.data=data;
+            this.left=null;
+            this.right=null;
+        }
+    }
+    node root;
+    void preorder(node root)
+    {
+        if(root==null)
+        {
+            return;
+        }
+        System.out.print(root.data+" ");
+        preorder(root.left);
+        preorder(root.right);
+    }
+    void postorder(node root)
+    {
+        if(root==null)
+        {
+            return;
+        }
+        postorder(root.left);
+        postorder(root.right);
+        System.out.print(root.data+" ");
+    }
+    void inorder(node root)
+    {
+        if(root==null)
+        {
+            return;
+        }
+        inorder(root.left);
+        System.out.print(root.data+" ");
+        inorder(root.right);
+    }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    BinaryTree tree=new BinaryTree();
+	    tree.root=new node(1);
+	    tree.root.left=new node(2);
+	    tree.root.right=new node(3);
+	    System.out.print("Preorder: ");
+	    tree.preorder(tree.root);
+	    System.out.println();
+	    System.out.print("Postorder: ");
+	    tree.postorder(tree.root);
+	    System.out.println();System.out.print("inorder: ");
+	    tree.inorder(tree.root);
+	    System.out.println();// your code goes here
+
+	}
+}
