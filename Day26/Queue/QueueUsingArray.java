@@ -18,6 +18,7 @@ class QueueUsingArray
         if(rear==capacity-1)
         {
             System.out.print("queue is full");
+			return;
         }
         arr[++rear]=data;
     }
@@ -26,6 +27,7 @@ class QueueUsingArray
         if(front>rear)
         {
             System.out.print("Queue is empty ");
+			return -1;
         }
         return arr[front++];
     }
@@ -34,6 +36,7 @@ class QueueUsingArray
         if(front>rear)
         {
             System.out.print("Queue is empty ");
+			return -1;
         }
         return arr[front];
     }
