@@ -45,6 +45,7 @@ class QueueUsingArray
         if(front>rear)
         {
             System.out.print("Queue is empty ");
+			return;
         }
         for(int i=front;i<=rear;i++)
         {
